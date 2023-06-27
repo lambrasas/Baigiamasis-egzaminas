@@ -7,6 +7,7 @@
   <title>Gulp template</title>
   <link rel="icon" type="image/x-icon" href="app/images/gulp.svg">
   <link rel="stylesheet" href="app/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <nav>
@@ -22,8 +23,8 @@
       <a href="#">Conctact</a>
     </div>
   </nav>
-  <div class="hero">
-    <div class="hero-all">
+  <div class="city-background">
+    <div class="hero">
     
       <div class="left">
         <img src="../../app/images/icon-2.png" alt="">
@@ -33,9 +34,53 @@
         <button>DOWNLOAD</button>
       </div>
 
-      <div class="right-signup">
+      <div class="right-signup-card">
+        <div class="signup-card-inside">
+          <div class="trial">
+            <p>Try Your <span>FREE</span>  Trial Today</p>
+          </div>
+          <div class="information">
+            <b class="details">Your details</b>
+            <div class="inputs">
+              <input placeholder="First name" type="text">
+              <input placeholder="Last name" type="text">
+              <input placeholder="Phone number" type="text">
+            </div>
+            <div class="subscription">
+              <b>Type of subscription</b>
+              <div class="subscription-options">
+                <label class="check-bubble">
+                  <input type="checkbox" checked="checked">
+                  <b>MONTHLY</b> 
+                </label>
+                <label class="check-bubble">
+                  <input type="checkbox" checked="checked">
+                  <b>YEARLY</b> 
+                </label>
+              </div>
+            </div>
+          </div>
+          <button><b>Get started</b> </button>
+        </div>
 
       </div>
+    </div>
+  </div>
+  <div class="media-bar">
+    <div class="media-about">
+      <b>Social Media</b>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+    </div>
+
+    <div class="icons">
+      <img src="app/images/facebook-logo.png" alt="">
+      <img src="app/images/instagram-logo.png" alt="">
+      <img src="app/images/twitter.png" alt="">
+      <img src="app/images/pinterest.png" alt="">
+      <span style="color:#e8998c">
+        <i  class="fas fa-rss fa-2xl"></i>
+      </span>
+      
     </div>
   </div>
 </body>
