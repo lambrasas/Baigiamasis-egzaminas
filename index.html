@@ -17,11 +17,11 @@
     </div>
 
     <div class="options">
-      <a href="#">Features</a>
-      <a href="#">About</a>
-      <a href="#">Pricing</a>
-      <a href="#">Reviews</a>
-      <a href="#">Conctact</a>
+      <a class="animation" href="#">Features</a>
+      <a class="animation" href="#">About</a>
+      <a class="animation" href="#">Pricing</a>
+      <a class="animation" href="#">Reviews</a>
+      <a class="animation" href="#">Contact</a>
     </div>
   </nav>
   <div class="city-background">
@@ -49,13 +49,14 @@
             </div>
             <div class="subscription">
               <b>Type of subscription</b>
+
               <div class="subscription-options">
                 <label class="check-bubble">
-                  <input type="checkbox" checked="checked">
+                  <input type="radio" name="sub" checked="checked">
                   <b>MONTHLY</b> 
                 </label>
                 <label class="check-bubble">
-                  <input type="checkbox" checked="checked">
+                  <input type="radio" name="sub">
                   <b>YEARLY</b> 
                 </label>
               </div>
@@ -74,14 +75,14 @@
     </div>
 
     <div class="icons">
-      <img src="app/images/facebook-logo.png" alt="">
-      <img src="app/images/instagram-logo.png" alt="">
-      <img src="app/images/twitter.png" alt="">
-      <img src="app/images/pinterest.png" alt="">
-      <span style="color:#e8998c">
-        <i  class="fas fa-rss fa-2xl"></i>
-      </span>
-      
+      <a href="#"><img src="app/images/facebook-logo.png" alt=""></a> 
+      <a href="#"><img src="app/images/instagram-logo.png" alt=""></a> 
+      <a href="#"><img src="app/images/twitter.png" alt=""></a> 
+      <a href="#"><img src="app/images/pinterest.png" alt=""></a>
+      <a href="#">
+        <span style="color:#e8998c"><i class="fas fa-rss fa-2xl"></i></span>
+      </a>
+
     </div>
   </div>
   <main class="mountains-background">
@@ -183,40 +184,163 @@
       <div class="basic">
         <div class="basic-price">
           <h1>Basic</h1>
-          <p>$0</p>
+          <p><span>$</span>0</p>
           <p>Free for life</p>
         </div>
-
         <div class="basic-features">
           <p>1 GB OF SPACE</p>
           <p>10 GB OF BANDWIDTH</p>
           <p>3 WEBSITES</p>
           <p>BASIC CUSTOMIZATION</p>
-          <p></p>
-          <p></p>
+          <p>WORDPRESS INTEGRATION</p>
+          <p>EMAIL SUPPORT</p>
 
         </div>
       </div>
 
       <div class="professional">
         <div class="professional-price">
-
+          <h1>Professional</h1>
+          <p><span>$</span>19</p>
+          <p>Monthly Payment</p>
+        </div>
+        <div class="popular">
+          <h1>OUR MOST POPULAR</h1>
         </div>
         <div class="professional-features">
-
+          <p>5 GB OF SPACE</p>
+          <p>50 GB OF BANDWIDTH</p>
+          <p>12 WEBSITES</p>
+          <p>ADVANCED CUSTOMIZATION</p>
+          <p>WORDPRESS INTEGRATION</p>
+          <p>EMAIL SUPPORT</p>
         </div>
       </div>
 
       <div class="enterprise">
         <div class="enterprise-price">
-
+          <h1>Enterprise</h1>
+          <p><span>$</span>70</p>
+          <p>Monthly Payment</p>
         </div>
         <div class="enterprise-features">
-          
+          <p>UNLIMITED SPACE</p>
+          <p>UNLIMITED BANDWIDTH</p>
+          <p>100 WEBSITES</p>
+          <p>ADVANCED CUSTOMIZATION</p>
+          <p>WORDPRESS INTEGRATION</p>
+          <p>24/7 CUSTOMER SUPPORT</p>
         </div>
 
       </div>
     </div>
   </div>
+  <div class="testimonial-panel">
+    <div class="top-text">
+      <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+      <hr>
+    </div>
+    <div class="testimonial-messages">
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+        </div>
+        
+        <div class="profile">
+            <div class="profile-picture">
+              <img src="../app/images/avatar.png" alt="">
+            </div>
+            <div class="name">
+              <h1>Jeremy H.</h1>
+              <p>Manager</p>
+            </div>
+          </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+        </div>
+        <div class="profile">
+            <div class="profile-picture">
+              <img src="../app/images/avatar.png" alt="">
+            </div>
+            <div class="name">
+              <h1>John S.</h1>
+              <p>Freelancer</p>
+            </div>
+          </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+        </div>
+        <div class="profile">
+            <div class="profile-picture">
+              <img src="../app/images/avatar.png" alt="">
+            </div>
+            <div class="name">
+              <h1>Susan W.</h1>
+              <p>Photographer</p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div class="bubbles">
+      <span class="circle"></span>
+      <span class="circle filled"></span>
+      <span class="circle"></span>
+      <span class="circle"></span>
+    </div>
+  </div>
+  <div class="orange-background">
+    <div class="top-text">
+      <h1>CONTACT US</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="right-signup-card">
+      <div class="signup-card-inside">
+        <div class="information">
+          <div class="inputs">
+            <input placeholder="First name" type="text">
+            <input placeholder="Last name" type="text">
+            <input placeholder="Phone number" type="text">
+          </div>
+          <div class="subscription">
+            <div class="subscription-options">
+              <label class="check-bubble">
+                <input type="radio" name="type" checked="checked">
+                <b>PERSONAL</b> 
+              </label>
+              <label class="check-bubble">
+                <input type="radio" name="type">
+                <b>COMPANY</b> 
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="button-div">
+          <button><b>SEND</b></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <div class="logos">
+      <button><img src="../app/images/facebook-logo.svg" alt=""></button>
+      <button><img src="../app/images/instagram-logo.svg" alt=""></button>
+      <button><img src="../app/images/twitter.svg" alt=""></button>
+      <button><img src="../app/images/pinterest.svg" alt=""></button>
+      <button>
+        <span style="color:#E27866">
+        <i  class="fas fa-rss fa-xl"></i>
+      </span>
+      </button>
+    </div>
+    <div class="trademark">
+      <h1>© 2019 Cheshire County</h1>
+    </div>
+  </footer>
 </body>
 </html>
