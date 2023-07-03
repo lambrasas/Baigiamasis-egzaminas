@@ -77,6 +77,9 @@ nav{
       &:visited{
         color: white;
       }
+      &:link{
+        color: white;
+      }
     }
   }
     
@@ -326,7 +329,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     // gap: 167px;
-    padding:90px 200px;
+    padding:90px 100px;
     gap: 168px;
 
     img{

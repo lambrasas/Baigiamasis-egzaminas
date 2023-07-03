@@ -1,29 +1,20 @@
-const burger = document.getElementById("burger")
-const links = document.getElementById("links")
+const burger = document.getElementById("burger");
+const links = document.getElementById("links");
+const navLinks = document.querySelectorAll(".nav-link");
 
+burger.addEventListener("click", function() {
+  links.classList.toggle("translate");
+});
 
-burger.addEventListener("click", function(){
-    links.classList.toggle("translate")
-})
-
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll(".animation");
-    const navHeight = document.querySelector("nav").offsetHeight;
-  
-    navLinks.forEach(function(link) {
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        const targetOffsetTop = target.offsetTop - navHeight;
-        window.scrollTo({
-          top: targetOffsetTop,
-          behavior: "smooth"
-        });
-      });
-    });
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const sectionId = link.getAttribute("href");
+    scrollToSection(sectionId);
+    
+    // Close the navigation menu on mobile
+    if (window.innerWidth <= 768) {
+      links.classList.remove("translate");
+    }
   });
-  
-
-  
-  
-  
+});
