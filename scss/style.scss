@@ -9,7 +9,7 @@ html{
   scroll-behavior: smooth;
 }
 nav{
-  background: red;
+  background: #1C1C1C;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -17,7 +17,7 @@ nav{
   padding:7px 150px;
   position: fixed;
   overflow: hidden;
-  // z-index: 1;
+  z-index: 1;
   width: 100%;
 
   #burger{
