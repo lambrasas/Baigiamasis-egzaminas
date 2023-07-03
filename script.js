@@ -12,9 +12,9 @@ navLinks.forEach((link) => {
     const sectionId = link.getAttribute("href");
     scrollToSection(sectionId);
     
-    // Close the navigation menu on mobile
     if (window.innerWidth <= 768) {
       links.classList.remove("translate");
     }
+    
   });
 });
