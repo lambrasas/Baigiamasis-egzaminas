@@ -28,6 +28,7 @@ nav{
 
   img{
     margin-right: 50px;
+    width: 150px;
   }
   
   .options{
@@ -35,11 +36,15 @@ nav{
     justify-content: center;
     align-items: center;
     gap: 30px;
+    a{
+      font-size: 40px;
+    }
 
     .animation{
       display: inline-block;
       position: relative;
       color: #E27866;
+      font-size: 18px;
 
       &::after{
         content: "";
@@ -89,7 +94,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 134px;
+    padding: 135px;
     gap: 60px;
     margin-left: 20px;
   
@@ -321,7 +326,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     // gap: 167px;
-    padding:90px 100px;
+    padding:90px 200px;
     gap: 168px;
 
     img{
@@ -978,6 +983,7 @@ footer{
         padding: 25px 0;
         transform: translateY(-280px);
         z-index: 10;
+        transition: 0.3s ease-in-out;
         
 
       a{
@@ -989,7 +995,7 @@ footer{
       }
     }
     .options.translate{
-      transform: translateY(18px);
+      transform: translateY(15px);
       transition: 0.3s;
     }
   }
