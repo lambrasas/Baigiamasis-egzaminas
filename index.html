@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="scroll-behavior: smooth;" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gulp template</title>
+  <title>Baigiamasis Darbas</title>
   <link rel="icon" type="image/x-icon" href="app/images/gulp.svg">
   <link rel="stylesheet" href="app/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 </head>
 <body>
   <nav>
@@ -45,26 +49,26 @@
           <div class="information">
             <b class="details">Your details</b>
             <div class="inputs">
-              <input placeholder="First name" type="text">
-              <input placeholder="Last name" type="text">
-              <input placeholder="Phone number" type="text">
+              <input id="name" placeholder="First name" type="text" required>
+              <input id="surname" placeholder="Last name" type="text" required>
+              <input id="phone" placeholder="Phone number" type="text" required>
             </div>
             <div class="subscription">
               <b>Type of subscription</b>
 
               <div class="subscription-options">
                 <label class="check-bubble">
-                  <input type="radio" name="sub" checked="checked">
+                  <input type="radio" name="sub" value="monthly" checked="checked">
                   <b>MONTHLY</b> 
                 </label>
                 <label class="check-bubble">
-                  <input type="radio" name="sub">
+                  <input type="radio" value="yearly" name="sub">
                   <b>YEARLY</b> 
                 </label>
               </div>
             </div>
           </div>
-          <button><b>Get started</b> </button>
+          <button id="signup-button"><b>Get started</b> </button>
         </div>
 
       </div>
@@ -82,7 +86,7 @@
       <a href="#"><img src="app/images/twitter.svg" alt=""></a> 
       <a href="#"><img src="app/images/pinterest.svg" alt=""></a>
       <a href="#">
-        <span style="color:#e8998c"><i class="fas fa-rss fa-2xl"></i></span>
+        <span style="color:#e8998c"><i class="fas fa-rss fa-xl"></i></span>
       </a>
 
     </div>
@@ -91,9 +95,9 @@
     <div class="features-panel-1">
       <div class="left-info">
         <div class="sign-up-buttons">
-          <button><p>REGISTER</p></button>
-          <button><p>APPLY</p></button>
-          <button><p>RECIEVE</p></button>
+          <button class="clicked" onclick="clickHandler(event)"><p>REGISTER</p></button>
+          <button onclick="clickHandler(event)"><p>APPLY</p></button>
+          <button onclick="clickHandler(event)"><p>RECIEVE</p></button>
         </div>
         <div class="left-info-text">
           <h1>Tabs with soft transitioning effect. Explained propriety of out perpetual his you.</h1>
@@ -103,10 +107,18 @@
       </div>
       <div class="right-images">
         <div class="top-images">
-          <img src="../../app/images/leaf.png" alt="">
-          <img src="../../app/images/salad.png" alt="">
+          <div class="image-overlay">
+            <img class="overlay" onclick="clickHandler(event)" src="../../app/images/leaf.png" alt="">
+          </div>
+          <div class="image-overlay">
+            <img onclick="clickHandler(event)" src="../../app/images/salad.png" alt="">
+          </div>
+          
         </div>
-        <img src="../../app/images/shoes.png" alt="">
+        <div class="image-overlay">
+          <img onclick="clickHandler(event)" src="../../app/images/shoes.png" alt="">
+        </div>
+        
       </div>
     </div>
   </main>
@@ -237,63 +249,229 @@
       </div>
     </div>
   </div>
-  <div class="testimonial-panel" id="testimonial-panel">
-    <div class="top-text">
-      <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
-      <hr>
-    </div>
-    <div class="testimonial-messages">
-      <div class="testimonial">
-        <div class="testimonial-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+  <div class="swiper" id="testimonial-panel">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" >
+        <div class="testimonial-panel" id="testimonial-panel">
+        <div class="top-text">
+          <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+          <hr>
         </div>
-        
-        <div class="profile">
-            <div class="profile-picture">
-              <img src="app/images/avatar.png" alt="">
+        <div class="testimonial-messages">
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
             </div>
-            <div class="name">
-              <h1>Jeremy H.</h1>
-              <p>Manager</p>
-            </div>
+            
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Jeremy H.</h1>
+                  <p>Manager</p>
+                </div>
+              </div>
           </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>John S.</h1>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Susan W.</h1>
+                  <p>Photographer</p>
+                </div>
+              </div>
+          </div>
+    
         </div>
-        <div class="profile">
-            <div class="profile-picture">
-              <img src="app/images/avatar.png" alt="">
-            </div>
-            <div class="name">
-              <h1>John S.</h1>
-              <p>Freelancer</p>
-            </div>
-          </div>
       </div>
-      <div class="testimonial">
-        <div class="testimonial-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-panel" id="testimonial-panel">
+        <div class="top-text">
+          <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+          <hr>
         </div>
-        <div class="profile">
-            <div class="profile-picture">
-              <img src="app/images/avatar.png" alt="">
+        <div class="testimonial-messages">
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
             </div>
-            <div class="name">
-              <h1>Susan W.</h1>
-              <p>Photographer</p>
-            </div>
+            
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Jeremy H.</h1>
+                  <p>Manager</p>
+                </div>
+              </div>
           </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>John S.</h1>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Susan W.</h1>
+                  <p>Photographer</p>
+                </div>
+              </div>
+          </div>
+        </div>
       </div>
-
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-panel" id="testimonial-panel">
+        <div class="top-text">
+          <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+          <hr>
+        </div>
+        <div class="testimonial-messages">
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Jeremy H.</h1>
+                  <p>Manager</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>John S.</h1>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Susan W.</h1>
+                  <p>Photographer</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-panel" id="testimonial-panel">
+        <div class="top-text">
+          <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
+          <hr>
+        </div>
+        <div class="testimonial-messages">
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Jeremy H.</h1>
+                  <p>Manager</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>John S.</h1>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+            </div>
+            <div class="profile">
+                <div class="profile-picture">
+                  <img src="app/images/avatar.png" alt="">
+                </div>
+                <div class="name">
+                  <h1>Susan W.</h1>
+                  <p>Photographer</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
-    <div class="bubbles">
-      <span class="circle"></span>
-      <span class="circle filled"></span>
-      <span class="circle"></span>
-      <span class="circle"></span>
+    <!-- If we need pagination -->
+    <div class="pagination-container">
+       <div class="swiper-pagination"></div>
     </div>
+   
   </div>
   <div class="orange-background" id="orange-background">
     <div class="top-text">
@@ -304,25 +482,25 @@
       <div class="signup-card-inside">
         <div class="information">
           <div class="inputs">
-            <input placeholder="First name" type="text">
-            <input placeholder="Last name" type="text">
-            <input placeholder="Phone number" type="text">
+            <input id="second-name" placeholder="First name" type="text">
+            <input id="second-surname" placeholder="Last name" type="text">
+            <input id="second-phone" placeholder="Phone number" type="text">
           </div>
           <div class="subscription">
             <div class="subscription-options">
               <label class="check-bubble">
-                <input type="radio" name="type" checked="checked">
+                <input type="radio" name="type" checked="checked" value="personal">
                 <b>PERSONAL</b> 
               </label>
               <label class="check-bubble">
-                <input type="radio" name="type">
+                <input type="radio" name="type" value="company">
                 <b>COMPANY</b> 
               </label>
             </div>
           </div>
         </div>
         <div class="button-div">
-          <button><b>SEND</b></button>
+          <button id="second-signup-button"><b>SEND</b></button>
         </div>
       </div>
 
@@ -344,7 +522,10 @@
       <h1>© 2019 Cheshire County</h1>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
   <script src="script.js"></script>
+  
 </body>
 
 </html>
