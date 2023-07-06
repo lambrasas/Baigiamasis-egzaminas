@@ -1358,12 +1358,14 @@ footer{
               padding: 0px;
               .testimonial-text{
                 padding: 10px;
+
+                &::after{
+                left: 28%;
+                top: 38px;
+                }
               }
 
-              .testimonial-text::after{
-                left: 30%;
-                top: 42px;
-              }
+              
             }
           }
         }
