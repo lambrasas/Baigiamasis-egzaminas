@@ -122,17 +122,6 @@ function clickHandler(e) {
   }
   
 }
-// function clickHandler(e) {
-//   var target = e.target;
-//   if(target.type=="submit"){
-//     target.classList.toggle("clicked")
-//   }
-//   else{
-//     var button=target.parentNode
-//     button.classList.toggle("clicked")
-//   }
-  
-// }
 document.querySelectorAll('.animation').forEach(item => {
   item.addEventListener('click', scrollTo);
 });
