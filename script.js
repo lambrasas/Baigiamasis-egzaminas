@@ -7,27 +7,7 @@ window.onload = function() {
   burger.addEventListener("click", function() {
     links.classList.toggle("translate");
   });
-  
-  window.onload = function() {
-    var buttons = document.querySelectorAll('.sign-up-buttons button');
-  
-    buttons.forEach(function(button) {
-      button.addEventListener('click', function(event) {
-        // Remove the clicked class from all buttons
-        buttons.forEach(function(btn) {
-          btn.classList.remove('clicked');
-        });
-  
-        // Add the clicked class to the clicked button
-        event.currentTarget.classList.add('clicked'); 
-      });
-    });
-  }
-  
 
-
-
-  
   navLinks.forEach((link) => {
     link.addEventListener("click", function(event) {
       event.preventDefault(); // Prevent the default link behavior
@@ -190,3 +170,13 @@ window.onload = function() {
     return false;
   }
 }
+const buttons = document.querySelectorAll(".sign-up-buttons button");
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      buttons.forEach((btn) => {
+        btn.classList.remove('clicked');
+      });
+      e.currentTarget.classList.add('clicked');
+    });
+  });
