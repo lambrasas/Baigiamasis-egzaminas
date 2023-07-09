@@ -7,23 +7,25 @@ window.onload = function() {
   burger.addEventListener("click", function() {
     links.classList.toggle("translate");
   });
-
-  var buttons = document.getElementsByClassName('sign-up-buttons')[0].getElementsByTagName('button');
-
-function clickHandler(event) {
-  // Remove the clicked class from all buttons
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove('clicked');
+  
+  window.onload = function() {
+    var buttons = document.querySelectorAll('.sign-up-buttons button');
+  
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        // Remove the clicked class from all buttons
+        buttons.forEach(function(btn) {
+          btn.classList.remove('clicked');
+        });
+  
+        // Add the clicked class to the clicked button
+        event.currentTarget.classList.add('clicked'); 
+      });
+    });
   }
+  
 
-  // Add the clicked class to the clicked button
-  event.target.classList.add('clicked');
-}
 
-// Attach click event to buttons
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', clickHandler);
-}
 
   
   navLinks.forEach((link) => {
