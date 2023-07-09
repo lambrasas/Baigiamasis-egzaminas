@@ -10,23 +10,22 @@ window.onload = function() {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent the default link behavior
+      event.preventDefault();
       
-      const targetId = this.getAttribute("href"); // Get the target section ID
-      const targetSection = document.querySelector(targetId); // Get the target section element
-      
+      const targetId = this.getAttribute("href"); 
+      const targetSection = document.querySelector(targetId);
       if (targetSection) {
-        const navHeight = document.querySelector("nav").offsetHeight; // Get the height of the navigation bar
-        const targetOffset = targetSection.offsetTop - navHeight; // Calculate the adjusted scroll position
+        const navHeight = document.querySelector("nav").offsetHeight;
+        const targetOffset = targetSection.offsetTop - navHeight;
 
        
 
         window.scrollTo({
           top: targetOffset,
-          behavior: "smooth" // Optionally, add smooth scrolling effect
+          behavior: "smooth"
         });
         
-        links.classList.remove("translate"); // Close the menu
+        links.classList.remove("translate");
       }
     });
   });
@@ -150,19 +149,19 @@ window.onload = function() {
   });
 
   function scrollTo(target) {
-    const targetId = target.getAttribute('href'); // Get the target section ID
-    const targetSection = document.querySelector(targetId); // Get the target section element
+    const targetId = target.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-      const navHeight = document.querySelector("nav").offsetHeight; // Get the height of the navigation bar
-      const targetOffset = targetSection.offsetTop - navHeight; // Calculate the adjusted scroll position
+      const navHeight = document.querySelector("nav").offsetHeight;
+      const targetOffset = targetSection.offsetTop - navHeight;
 
       window.scrollTo({
         top: targetOffset,
-        behavior: "smooth" // Optionally, add smooth scrolling effect
+        behavior: "smooth"
       });
 
-      links.classList.remove("translate"); // Close the menu
+      links.classList.remove("translate");
     } else {
       console.error("Target section not found:", targetId);
     }
