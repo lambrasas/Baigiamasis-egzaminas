@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="scroll-behavior: smooth;" lang="en">
+<html style="scroll-behavior: smooth; overflow-x: hidden; width: 100%;"  lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <nav>
 
     <div class="nav-left">
@@ -59,10 +59,12 @@
               <div class="subscription-options">
                 <label class="check-bubble">
                   <input type="radio" name="sub" value="monthly" checked="checked">
+                  <span></span>
                   <b>MONTHLY</b> 
                 </label>
                 <label class="check-bubble">
                   <input type="radio" value="yearly" name="sub">
+                  <span></span>
                   <b>YEARLY</b> 
                 </label>
               </div>
@@ -490,10 +492,12 @@
             <div class="subscription-options">
               <label class="check-bubble">
                 <input type="radio" name="type" checked="checked" value="personal">
+                <span></span>
                 <b>PERSONAL</b> 
               </label>
               <label class="check-bubble">
                 <input type="radio" name="type" value="company">
+                <span></span>
                 <b>COMPANY</b> 
               </label>
             </div>

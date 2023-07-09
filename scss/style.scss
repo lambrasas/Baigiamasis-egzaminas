@@ -140,7 +140,7 @@ nav{
      
       .signup-card-inside{
         
-          .trial{
+        .trial{
             font-size: 20px;
             background: #F5F5F5;
             padding: 16.5px 50px;
@@ -189,9 +189,44 @@ nav{
                 font-size: 9px;
                 display: flex;
                 gap: 20px;
+
+                .check-bubble{
+                  position: relative;
+                  padding-left: 25px;
+                  display: inline-block;
+
+                  input[type='radio']{
+                    display: none;
+
+                    &:checked + span::after {
+                      content: "";
+                      display: block;
+                      height: 6px;
+                      width: 6px;
+                      background-color: #41D395;
+                      border-radius: 50%;
+                    }
+                  }
+                  
+
+                   span {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    height: 12px;
+                    width: 12px;
+                    border: 1px solid #41D395;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                  }
+                }
               }
             }
-          }
+        }
         
         button{
           width: 100%;
@@ -970,18 +1005,55 @@ nav{
               gap: 20px;
               margin-top: 35px;
 
-              label{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
+              .check-bubble{
+                position: relative;
+                padding-left: 25px;
+                display: inline-block;
                 b{
                   color: black;
                 }
+
+                input[type='radio'] {
+                  display: none;
+  
+                  &:checked + span::after {
+                    content: "";
+                    display: block;
+                    height: 6px;
+                    width: 6px;
+                    background-color: #41D395;
+                    border-radius: 50%;
+                  }
+                }
+                span {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 12px;
+                width: 12px;
+                border: 1px solid #41D395;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+        
+                &::after {
+                  content: "";
+                  display: none; // Hide the ::after pseudo-element by default
+                  height: 6px;
+                  width: 6px;
+                  background-color: #41D395;
+                  border-radius: 50%;
+                }
               }
+              }
+              
             }
           }
-        }
+      }
+    }
       .button-div{
         display: flex;
         align-items: center;
@@ -1006,7 +1078,6 @@ nav{
         } 
       }
       
-    }
   }
 }
 footer{
@@ -1462,7 +1533,7 @@ footer{
   .city-background{
     height: fit-content;
     .hero{
-      padding: 80px 20px;
+      // padding: 80px 20px;
       flex-direction: column;
       margin: 0;
 
@@ -1572,6 +1643,7 @@ footer{
     padding: 0;
     text-align: center;
     padding: 20px 0;
+    gap: 20px;
 
     .icons{
       gap: 2px;
